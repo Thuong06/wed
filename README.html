@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://example.com/gta5.jpg'); /* Thay bằng URL ảnh GTA5 */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Chào Mừng Bạn Đến Với Trang Web</h1>
+
+    <div class="button-container">
+        <button onclick="window.location.href='admin.html'">Admin</button>
+        <button onclick="window.location.href='donate.html'">Donate</button>
+    </div>
+
+</body>
+</html>
