@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email with EmailJS</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("-xHOWUNtTWcz609w5"); // Thay bằng Public Key của bạn từ EmailJS
+        })();
+    </script>
+</head>
+<body>
+    <h2>Gửi tin nhắn</h2>
+    <form id="contactForm">
+        <label for="name">Tên của bạn:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email của bạn:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Tin nhắn:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Gửi</button>
+    </form>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const serviceID = "service_3mxbhcf"; // Thay bằng Service ID
+            const templateID = "template_u29xvvm"; // Thay bằng Template ID
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    alert("Tin nhắn đã được gửi thành công!");
+                }, (err) => {
+                    alert("Có lỗi xảy ra: " + JSON.stringify(err));
+                });
+        });
+    </script>
+</body>
+</html>
