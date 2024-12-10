@@ -1,45 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Email with EmailJS</title>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("-xHOWUNtTWcz609w5"); // Thay bằng Public Key của bạn từ EmailJS
-        })();
-    </script>
-</head>
-<body>
-    <h2>Gửi tin nhắn</h2>
-    <form id="contactForm">
-        <label for="name">Tên của bạn:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+<form id="form">
+  <div class="field">
+    <label for="to_name">to_name</label>
+    <input type="text" name="to_name" id="to_name">
+  </div>
+  <div class="field">
+    <label for="from_name">from_name</label>
+    <input type="text" name="from_name" id="from_name">
+  </div>
+  <div class="field">
+    <label for="message">message</label>
+    <input type="text" name="message" id="message">
+  </div>
 
-        <label for="email">Email của bạn:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+  <input type="submit" id="button" value="Send Email" >
+</form>
+<style> 
+  .field {
+  margin-bottom: 10px;
+}
 
-        <label for="message">Tin nhắn:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
+}
 
-        <button type="submit">Gửi</button>
-    </form>
+.field input {
+  display: block;
+  min-width: 250px;
+  line-height: 1.5;
+  font-size: 14px;
+}
 
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460AA;
+  color: #fff;
+  border: none
+}
+</style>
+<script>
+  const btn = document.getElementById("button")
 
-            const serviceID = "service_3mxbhcf"; // Thay bằng Service ID
-            const templateID = "template_u29xvvm"; // Thay bằng Template ID
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault()
 
-            emailjs.sendForm(serviceID, templateID, this)
-                .then(() => {
-                    alert("Tin nhắn đã được gửi thành công!");
-                }, (err) => {
-                    alert("Có lỗi xảy ra: " + JSON.stringify(err));
-                });
-        });
-    </script>
-</body>
-</html>
+  btn.value = "Sending..."
+
+  const serviceID = "default_service"
+  const templateID = "template_30vrrpk"
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      btn.value = "Send Email"
+      alert("Sent!")
+    },
+    (err) => {
+      btn.value = "Send Email"
+      alert(JSON.stringify(err))
+    },
+  )
+})
+
+</script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('-xHOWUNtTWcz609w5')
+</script>
