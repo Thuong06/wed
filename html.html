@@ -41,6 +41,12 @@ input[type="submit"] {
   border: none
 }
 </style>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('-xHOWUNtTWcz609w5')
+</script>
 <script>
   const btn = document.getElementById("button")
 
@@ -64,10 +70,4 @@ document.getElementById("form").addEventListener("submit", function (event) {
   )
 })
 
-</script>
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('-xHOWUNtTWcz609w5')
 </script>
