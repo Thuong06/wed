@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sống </title>
+    <meta charset="UTF-8"> <!-- Định dạng ký tự là UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Tối ưu hiển thị trên các thiết bị -->
+    <title>Office Crack by Thuong Hoang</title> <!-- Tiêu đề trang -->
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://gstatic.gvn360.com/2020/05/Gearvn_GTA-V_-26-scaled.jpg'); /* Thay bằng đường dẫn tới ảnh */
+            background-image: url('https://images.pexels.com/photos/221537/pexels-photo-221537.jpeg'); /* Ảnh nền */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             font-family: Arial, sans-serif;
             color: white;
+        }
+        .header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
         }
         .button-container {
             display: flex;
             gap: 20px;
-            margin-bottom: 30px; /* Khoảng cách giữa các nút và thẻ mô tả */
+            justify-content: center;
+            margin-top: 20px;
         }
         .button-container button {
-            padding: 20px 40px;
-            font-size: 1.5rem;
+            padding: 15px 30px;
+            font-size: 1.2rem;
             font-weight: bold;
             border: none;
             border-radius: 10px;
@@ -36,59 +39,79 @@
             box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s, background-color 0.3s;
         }
+         h5 {
+         text-align: center;
+         color: red;
+       }
         .button-container button:nth-child(1) {
-            background-color: #ff6347; /* Màu đỏ */
+            background-color: #ff6347;
         }
         .button-container button:nth-child(2) {
-            background-color: #4682b4; /* Màu xanh dương */
-        }
-        .button-container button:nth-child(3) {
-            background-color: #32cd32; /* Màu xanh lá */
+            background-color: #4682b4;
         }
         .button-container button:hover {
             transform: scale(1.1);
         }
-        .description {
-            width: 60%;
-            background-color: rgba(0, 0, 0, 0.8);
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product {
+            background: rgba(0, 0, 0, 0.8);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+            width: 250px;
             text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
         }
-        #donate-image {
-            display: none;
-            margin-top: 30px;
-            width: 300px;
-            height: auto;
+        .product img {
+            width: 100%;
+            border-radius: 10px;
         }
-    </style>
+        .product h3 {
+            margin: 10px 0;
+        }
+        </style>
+    <script>
+        function showUpdateMessage() {
+            alert('File đang update, vui lòng liên hệ admin.');
+        }
+
+
+        function update() {
+            alert('Tính Năng sẽ sớm được cập nhật.');
+        }
+    </script>
 </head>
 <body>
+    <div class="header">Office Crack by Thuong Hoang</div>
     <div class="button-container">
-        <button>Nạp tiền</button>
-        <button id="donate-btn">Donate</button>
-        <!-- Thêm liên kết vào nút IB -->
-        <a href="https://www.tiktok.com/@chiucaccauday?_t=8s4MblLTAw5&_r=1" target="_blank">
-            <button>IB</button>
-        </a>
+        <a href="https://www.facebook.com/thuong.hoang.7462">
+        <button>Liên hệ hỗ trợ</button>
+          </a>
+        <button onclick="showUpdateMessage()">Install Office</button>
     </div>
-    <div class="description">
-        <p>
-            Cuộc hành trình đi làm luôn là một trải nghiệm đáng nhớ trong cuộc đời của mỗi người. Đó là những ngày đầu tiên háo hức, hồi hộp, đôi khi xen lẫn chút lo âu. Mỗi ngày làm việc là một chặng đường học hỏi, không chỉ về kiến thức chuyên môn mà còn về kỹ năng giao tiếp, xử lý tình huống và thích nghi với môi trường. Qua thời gian, những thách thức dần trở thành động lực, giúp tôi trưởng thành hơn, mạnh mẽ hơn. Cuộc hành trình ấy không chỉ mang lại cho tôi công việc mà còn là bài học cuộc sống đầy quý giá.
-        </p>
+    <div class="products">
+        <div class="product">
+            <h3>Microsoft Office 2010</h3>
+            <p>Giá: 500,000 VNĐ</p>
+            <button onclick="update()" >Mua ngay</button>
+        </div>
+        <div class="product">
+            <h3>Microsoft Office 2013</h3>
+            <p>Giá: 800,000 VNĐ</p>
+            <button onclick="update()" >Mua ngay</button>
+        </div>
+        <div class="product">
+            <h3>Microsoft Office 2021</h3>
+            <p>Giá: 1,200,000 VNĐ</p>
+            <button onclick="update()" >Mua ngay</button>
+        </div>
+     
     </div>
-    <!-- Ảnh sẽ được hiển thị khi nhấn Donate -->
-    <img id="donate-image" src="https://img.upanh.tv/2024/12/09/z6113223576989_b2efc04860a4948239c3e22a30f5d508.jpg" alt="Donate Image">
-    
-    <script>
-        // JavaScript để hiển thị ảnh khi bấm Donate
-        document.getElementById("donate-btn").addEventListener("click", function() {
-            var img = document.getElementById("donate-image");
-            img.style.display = img.style.display === "none" ? "block" : "none";
-        });
-    </script>
+    <h5>Hoang Thuong</h5>
 </body>
-</html>
+</html> 
