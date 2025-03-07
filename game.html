@@ -76,6 +76,18 @@
         }
         </style>
     <script>
+        function key() 
+        {
+            var userKey = prompt("Vui lòng nhập key để tiếp tục:");
+            if (userKey === "bypassbythuong")
+            {
+                window.location.href = "https://drive.google.com/file/d/1TMk65HvgynFGo7SzA_5ujg7GXqJvfymx/view?usp=drive_link";
+            }     
+            else {
+                    alert("Key không hợp lệ! Vui lòng thử lại.");
+                 }
+        }
+
         function showUpdateMessage() {
             alert('File đang update, vui lòng liên hệ admin.');
         }
@@ -92,7 +104,7 @@
         <a href="https://www.facebook.com/thuong.hoang.7462">
         <button>Liên hệ hỗ trợ</button>
           </a>
-        <button onclick="showUpdateMessage()">Install Office</button>
+        <button onclick="key()">Install Office</button>
     </div>
     <div class="products">
         <div class="product">
